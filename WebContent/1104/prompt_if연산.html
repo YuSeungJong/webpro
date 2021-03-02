@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/public.css">
+<style>
+  div{
+  	border : 1px dotted green;
+  	height : 200px;
+  }
+</style>
+
+<script>
+	function proc1(){
+		su1 = parseInt(prompt("수1을 입력하시오"));
+		su2 = parseInt(prompt("수2를 입력하시오"));
+		oper = prompt("연산자를 입력하시오");
+		
+		res = "수1 : " + su1 + "<br>";
+		res += "수2 : " + su2 + "<br>";
+		res += "연산자 : " + oper + "<br>";
+		
+		if(oper=='+'){
+			calc = su1 + su2;
+		}else if(oper=='-'){
+			calc = su1 - su2;
+		}else if(oper=='*'){
+			calc = su1 * su2;
+		}else{
+			calc = su1 / su2;
+		}
+		
+		res+= "결과 : " + su1 + " " + oper + " " + su2 + " = " + calc
+		result = document.getElementById("result");
+		result.innerHTML = res;
+		result.style.fontsize = "1.5em";
+		
+	}
+</script>
+</head>
+<body>
+<pre>
+ 확인 버튼 클릭하면 proc1()함수호출
+ 두개의 수와 연산자 하나를 입력 받는다 - prompt이용
+ 
+ 연산자의 종류에 따라서 각 연산을 수행한다
+</pre>
+ <input type="button" value="확인" onclick="proc1()"><br><br>
+ 
+ <div id="result"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
